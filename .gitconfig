@@ -1,0 +1,7 @@
+[user]
+	name = chetannn
+	email = chetankharel7@gmail.com
+[credential]
+	helper = cache
+[core]
+	excludesfile = ~/.gitignore
