@@ -10,4 +10,5 @@ local key_mapper = function(mode, key, result)
   )
 end
 
-key_mapper('i', 'jk', '<ESC>')
+keymap_mapper.set("x","<leader>p", "\"_dp")
+
