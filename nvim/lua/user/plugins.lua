@@ -13,6 +13,8 @@ use 'tpope/vim-commentary'
 
 use 'tpope/vim-surround'
 
+use 'tpope/vim-sleuth'
+
 use ( 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 use {

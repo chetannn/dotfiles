@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/chetankharel/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
+  ["vim-sleuth"] = {
+    loaded = true,
+    path = "/Users/chetankharel/.local/share/nvim/site/pack/packer/start/vim-sleuth",
+    url = "https://github.com/tpope/vim-sleuth"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/chetankharel/.local/share/nvim/site/pack/packer/start/vim-surround",
