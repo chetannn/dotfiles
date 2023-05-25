@@ -1,7 +1,7 @@
 live_config_reload: true
 
 window:
-  opacity: 0.85
+  opacity: 0.95
   padding:
     x: 18
     y: 16
@@ -11,7 +11,7 @@ window:
 
 font:
   normal:
-    family: "Monolisa"
+    family: "JetBrainsMono Nerd Font Mono"
     style: Regular
   size: 16.0
   offset:

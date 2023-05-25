@@ -7,7 +7,11 @@ return require('packer').startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-use "rebelot/kanagawa.nvim"
+use 'rebelot/kanagawa.nvim'
+
+use 'tpope/vim-commentary'
+
+use 'tpope/vim-surround'
 
 use ( 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
@@ -32,8 +36,8 @@ use {
 }
 
 use({
-    "jose-elias-alvarez/null-ls.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
 })
 
   end)
