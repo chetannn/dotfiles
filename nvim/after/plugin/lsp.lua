@@ -22,7 +22,8 @@ lsp.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua'},
+    ['intelephense'] = { 'php' },
+    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua' },
   }
 })
 
@@ -44,6 +45,6 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.rustywind,
-        null_ls.builtins.completion.spell
+        null_ls.builtins.completion.spell,
     },
 })

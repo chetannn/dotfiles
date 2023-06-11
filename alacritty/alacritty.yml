@@ -7,7 +7,7 @@ window:
     y: 16
   dynamic_padding: false
   decorations: buttonless
-  startup_mode: SimpleFullscreen
+  startup_mode: FullScreen
 
 font:
   normal:
