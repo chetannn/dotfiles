@@ -15,6 +15,8 @@ use 'tpope/vim-surround'
 
 use 'tpope/vim-sleuth'
 
+use 'christoomey/vim-tmux-navigator'
+
 use ( 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
 use {
@@ -41,5 +43,10 @@ use({
     'jose-elias-alvarez/null-ls.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
 })
+
+use{
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+}
 
   end)

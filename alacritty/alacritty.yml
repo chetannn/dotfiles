@@ -3,26 +3,29 @@ live_config_reload: true
 window:
   opacity: 0.95
   padding:
-    x: 18
-    y: 16
+    x: 10
+    y: 10
   dynamic_padding: false
   decorations: buttonless
-  startup_mode: FullScreen
+  dimensions:
+    columns: 120
+    lines: 4
 
 font:
   normal:
     family: "JetBrainsMono Nerd Font Mono"
+    # family: "Monolisa"
     style: Regular
-  size: 16.0
+  size: 14.0
   offset:
-    x: 0 
-    y: 10
+    y: 15
+  glyph_offset:
+    y: 9
 
-cursor:
-  blinking: On
-  thickneess: 0.12
-  style:
-    shape: Beam
-    
 mouse:
   hide_when_typing: true
+
+key_bindings:
+  - { key: T, mods: Command, chars: "\x02\x63" }
+  - { key: W, mods: Command, chars: "\x02\x78" }
+  - { key: Q, mods: Command, chars: "\x02\x64" }
