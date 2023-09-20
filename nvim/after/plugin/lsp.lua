@@ -23,7 +23,7 @@ lsp.format_on_save({
   },
   servers = {
     ['intelephense'] = { 'php' },
-    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua' },
+    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua', 'go' },
   }
 })
 
@@ -32,6 +32,7 @@ lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
   'tsserver',
   'rust_analyzer',
+  'gopls',
   'tailwindcss'
 })
 
@@ -46,5 +47,6 @@ null_ls.setup({
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.rustywind,
         null_ls.builtins.completion.spell,
+        null_ls.builtins.formatting.gofumpt
     },
 })
