@@ -1,46 +1,26 @@
-local lsp = require('lsp-zero').preset({})
-local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
+local lsp_zero = require('lsp-zero')
+local null_ls = require("null-ls")
 
-
-cmp.setup({
-  mapping = {
-    ['<Tab>'] = cmp_action.tab_complete(),
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
-  }
-})
-
-
-
-lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
-lsp.format_on_save({
-  format_opts = {
-    timeout_ms = 10000,
-  },
-  servers = {
-    ['intelephense'] = { 'php' },
-    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua', 'go' },
-  }
-})
-
-
-lsp.ensure_installed({
-  -- Replace these with whatever servers you want to install
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {
   'tsserver',
   'rust_analyzer',
   'gopls',
   'tailwindcss'
+  },
+  handlers = {
+    lsp_zero.default_setup,
+    lua_ls = function()
+      local lua_opts = lsp_zero.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
+    end,
+  }
 })
-
-
-
-lsp.setup()
-
-local null_ls = require("null-ls")
 
 null_ls.setup({
     sources = {
