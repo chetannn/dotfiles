@@ -3,6 +3,7 @@ local null_ls = require("null-ls")
 
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
+  lsp_zero.buffer_autoformat()
 end)
 
 require('mason').setup({})
@@ -22,11 +23,15 @@ require('mason-lspconfig').setup({
   }
 })
 
-null_ls.setup({
-    sources = {
-        null_ls.builtins.formatting.prettier,
-        null_ls.builtins.formatting.rustywind,
-        null_ls.builtins.completion.spell,
-        null_ls.builtins.formatting.gofumpt
-    },
+lsp_zero.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = {
+    ['tsserver'] = {'javascript', 'typescript'},
+    ['rust_analyzer'] = {'rust'},
+    ['gofumpt'] = {'go'},
+  }
 })
+
