@@ -1,10 +1,14 @@
 local lsp_zero = require('lsp-zero')
 local null_ls = require("null-ls")
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
 
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
   lsp_zero.buffer_autoformat()
 end)
+
+lsp_zero.setup_servers({'tsserver', 'rust_analyzer', 'tailwindcss'})
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -29,9 +33,26 @@ lsp_zero.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['tsserver'] = {'javascript', 'typescript'},
+    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua', 'go' },
     ['rust_analyzer'] = {'rust'},
     ['gofumpt'] = {'go'},
   }
 })
 
+cmp.setup({
+  mapping = {
+    ['<Tab>'] = cmp_action.tab_complete(),
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+  }
+})
+
+local null_ls = require("null-ls")
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.rustywind,
+        null_ls.builtins.completion.spell,
+        null_ls.builtins.formatting.gofumpt
+    },
+})

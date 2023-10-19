@@ -5,7 +5,11 @@ return {
     { "tpope/vim-sleuth" },
     { "christoomey/vim-tmux-navigator" },
     { "tpope/vim-sleuth" },
-    { "nvim-treesitter/nvim-treesitter", build = ':TSUpdate' },
+    { "nvim-treesitter/nvim-treesitter",
+        build = function()
+            require('nvim-treesitter.install').update({ with_sync = true })
+        end
+    },
     { "VonHeikemen/lsp-zero.nvim", branch = 'v3.x', },
   -- LSP Support
    {'neovim/nvim-lspconfig'},
@@ -21,4 +25,15 @@ return {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
    },
    { "catppuccin/nvim", name = "catppuccin" },
+   { "nvim-lualine/lualine.nvim",
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    },
+   { 
+    'olivercederborg/poimandres.nvim',
+     priority = 1000,
+    },
+  {
+  'Exafunction/codeium.vim',
+  event = 'BufEnter'
+ }
 }

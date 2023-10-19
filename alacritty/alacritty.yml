@@ -1,10 +1,10 @@
 live_config_reload: true
 
 window:
-  opacity: 0.95
+  opacity: 1
   padding:
-    x: 10
-    y: 10
+    x: 5
+    y: 7
   dynamic_padding: false
   decorations: buttonless
   dimensions:
@@ -13,13 +13,16 @@ window:
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font Mono"
+    family: "DankMono Nerd Font"
     style: Regular
   size: 14.0
   offset:
-    y: 15
+    y: 18
   glyph_offset:
     y: 9
+
+import:
+  - ~/.config/alacritty/themes/poimandres.yml
 
 mouse:
   hide_when_typing: true

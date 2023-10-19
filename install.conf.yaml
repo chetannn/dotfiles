@@ -2,15 +2,17 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.tmux.conf: tmux/.tmux.conf
+    ~/.config/tmux/tmux-nerd-font-window-name.yml: tmux/tmux-nerd-font-window-name.yml
     ~/.config/nvim: nvim
     ~/.config/alacritty: alacritty
+    ~/.config/alacritty/themes: alacritty/themes
 
 - create:
     - ~/.vim/undo-history
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --init --recursive, Installing submodules]
