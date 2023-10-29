@@ -1,21 +1,20 @@
-require('telescope').setup{
-    defaults = {
-      file_ignore_patterns = { 'node_modules' },
-      hidden = true
-    },
-  
-    pickers = {
-      find_files = {
-      }
-    },
+require("telescope").setup({
+	defaults = {
+		file_ignore_patterns = { "node_modules" },
+		hidden = true,
+	},
 
-    extensions = {
-      file_browser = {
-        cwd_to_path = true,
-        hijack_netrw = true,
-        theme = "ivy",
-      }
-    }
-  }
+	pickers = {
+		find_files = {},
+	},
 
-require("telescope").load_extension "file_browser"
+	extensions = {
+		file_browser = {
+			cwd_to_path = true,
+			hijack_netrw = true,
+			theme = "ivy",
+		},
+	},
+})
+
+require("telescope").load_extension("file_browser")

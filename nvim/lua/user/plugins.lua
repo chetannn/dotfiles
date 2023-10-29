@@ -41,7 +41,7 @@ return {
 		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	},
 	{ "catppuccin/nvim", name = "catppuccin" },
-	{ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } },
+	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", opt = true } },
 	{
 		"olivercederborg/poimandres.nvim",
 		priority = 1000,
@@ -50,4 +50,5 @@ return {
 		"Exafunction/codeium.vim",
 		event = "BufEnter",
 	},
+	{ "kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async" },
 }
