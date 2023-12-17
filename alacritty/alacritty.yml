@@ -15,11 +15,7 @@ font:
   normal:
     family: "DankMono Nerd Font"
     style: Regular
-  size: 14.0
-  offset:
-    y: 18
-  glyph_offset:
-    y: 9
+  size: 16.0
 
 import:
   - ~/.config/alacritty/themes/poimandres.yml
