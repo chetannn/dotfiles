@@ -6,7 +6,6 @@
 
 - link:
     ~/.tmux.conf: tmux/.tmux.conf
-    ~/.config/tmux/tmux-nerd-font-window-name.yml: tmux/tmux-nerd-font-window-name.yml
     ~/.config/nvim: nvim
     ~/.config/alacritty: alacritty
     ~/.config/alacritty/themes: alacritty/themes

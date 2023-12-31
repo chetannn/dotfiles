@@ -12,7 +12,8 @@ window:
     lines: 4
 
   import:
-    - ~/.config/alacritty/themes/poimandres.yml
+    # - ~/.config/alacritty/themes/poimandres.yml
+    - ~/.config/alacritty/themes/catppuccin-mocha.toml
 
 font:
   normal:
