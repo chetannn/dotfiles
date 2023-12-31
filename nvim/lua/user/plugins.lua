@@ -70,4 +70,23 @@ return {
 			},
 		},
 	},
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			cmdline = {
+				enabled = true,
+				view = "cmdline_popup",
+				format = {
+					cmdline = { pattern = "^:", icon = ">", lang = "vim" },
+				},
+			},
+			presets = {
+				lsp_doc_border = true,
+			},
+		},
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+	},
 }

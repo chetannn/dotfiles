@@ -1,3 +1,5 @@
+local fb_actions = require("telescope").extensions.file_browser.actions
+
 require("telescope").setup({
 	defaults = {
 		file_ignore_patterns = { "node_modules" },
@@ -5,14 +7,21 @@ require("telescope").setup({
 	},
 
 	pickers = {
-		find_files = {},
+		find_files = {
+			theme = "dropdown",
+		},
 	},
 
 	extensions = {
 		file_browser = {
 			cwd_to_path = true,
 			hijack_netrw = true,
-			theme = "ivy",
+			theme = "dropdown",
+			mappings = {
+				["n"] = {
+					["N"] = fb_actions.create,
+				},
+			},
 		},
 	},
 })
