@@ -8,7 +8,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.buffer_autoformat()
 end)
 
-lsp_zero.setup_servers({ "tsserver", "rust_analyzer", "tailwindcss" })
+lsp_zero.setup_servers({ "rust_analyzer", "tailwindcss" })
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
@@ -25,6 +25,13 @@ require("mason-lspconfig").setup({
 			require("lspconfig").lua_ls.setup(lua_opts)
 		end,
 	},
+})
+
+require("lspconfig").tsserver.setup({
+	on_attach = function(client, bufnr)
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.documentRangeFormattingProvider = false
+	end,
 })
 
 lsp_zero.format_on_save({
