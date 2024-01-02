@@ -1,5 +1,4 @@
 return {
-	{ "rebelot/kanagawa.nvim" },
 	{ "tpope/vim-commentary" },
 	{ "tpope/vim-surround" },
 	{ "tpope/vim-sleuth" },
@@ -42,10 +41,6 @@ return {
 	},
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", opt = true } },
-	{
-		"olivercederborg/poimandres.nvim",
-		priority = 1000,
-	},
 	{
 		"Exafunction/codeium.vim",
 		event = "BufEnter",
