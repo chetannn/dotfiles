@@ -9,7 +9,7 @@ window:
   decorations: buttonless
   dimensions:
     columns: 120
-    lines: 4
+    lines: 40
 
   import:
     # - ~/.config/alacritty/themes/poimandres.yml
