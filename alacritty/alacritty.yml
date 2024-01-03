@@ -4,7 +4,7 @@ env:
 live_config_reload: true
 
 window:
-  opacity: 1
+  opacity: 0.90
   padding:
     x: 4
     y: 10
