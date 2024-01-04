@@ -20,9 +20,9 @@ window:
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font Mono"
+    family: "DankMono Nerd Font"
     style: Regular
-  size: 14.0
+  size: 15.0
 
 mouse:
   hide_when_typing: true
