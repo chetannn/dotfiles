@@ -119,5 +119,9 @@ return {
 				})
 			end,
 		},
+		{
+			"ThePrimeagen/harpoon",
+			dependencies = { "nvim-lua/plenary.nvim" },
+		},
 	},
 }
