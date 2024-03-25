@@ -34,7 +34,6 @@ return {
 	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "L3MON4D3/LuaSnip" },
-	{ "jose-elias-alvarez/null-ls.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
@@ -122,6 +121,29 @@ return {
 		{
 			"ThePrimeagen/harpoon",
 			dependencies = { "nvim-lua/plenary.nvim" },
+		},
+		{
+			"stevearc/conform.nvim",
+			event = { "BufWritePre", "BufReadPre" },
+			config = function()
+				local conform = require("conform")
+
+				conform.setup({
+					formatters_by_ft = {
+						lua = { "stylua" },
+						javascript = { { "prettierd", "prettier" } },
+						typescript = { { "prettierd", "prettier" } },
+						svelte = { { "prettierd", "prettier" } },
+						javascriptreact = { { "prettierd", "prettier" } },
+						typescriptreact = { { "prettierd", "prettier" } },
+						css = { { "prettierd", "prettier" } },
+						rust = { "rustfmt" },
+						go = { "gofumpt" },
+						yaml = { "yamlfix" },
+					},
+					format_on_save = { timeout_ms = 1000, lsp_fallback = true, async = false },
+				})
+			end,
 		},
 	},
 }
