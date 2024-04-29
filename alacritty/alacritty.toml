@@ -9,11 +9,11 @@ size = 16.0
 offset = { x = 0, y = 0 }
 
 [font.normal]
-family = "SFMono Nerd Font"
+family = "JetbrainsMono Nerd Font Mono"
 style = "Regular"
 
 [[keyboard.bindings]]
-chars = "\u0002s"
+chars = "\u0002K"
 key = "K"
 mods = "Command"
 
@@ -98,7 +98,6 @@ chars = """
 """
 key = "S"
 mods = "Command"
-
 
 [[keyboard.bindings]]
 chars = "\u0002g"
