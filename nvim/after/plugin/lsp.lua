@@ -15,13 +15,14 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
-lsp_zero.setup_servers({ "rust_analyzer", "tailwindcss", "tsserver", "volar" })
+lsp_zero.setup_servers({ "rust_analyzer", "tailwindcss", "tsserver", "volar", "gleam" })
 
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"tsserver",
 		"rust_analyzer",
 		"gopls",
+		"gleam",
 	},
 	handlers = {
 		lsp_zero.default_setup,
@@ -50,6 +51,7 @@ lspconfig.tsserver.setup({
 })
 
 lspconfig.volar.setup({})
+lspconfig.gleam.setup({})
 
 cmp.setup({
 	mapping = {

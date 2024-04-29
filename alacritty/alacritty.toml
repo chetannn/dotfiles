@@ -5,11 +5,11 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [font]
-size = 14.0
+size = 16.0
 offset = { x = 0, y = 0 }
 
 [font.normal]
-family = "JetBrainsMono Nerd Font Mono"
+family = "SFMono Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -97,6 +97,12 @@ chars = """
 \u001B:w
 """
 key = "S"
+mods = "Command"
+
+
+[[keyboard.bindings]]
+chars = "\u0002g"
+key = "G"
 mods = "Command"
 
 [mouse]

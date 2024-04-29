@@ -4,6 +4,9 @@ require("telescope").setup({
 	defaults = {
 		file_ignore_patterns = { "node_modules" },
 		hidden = true,
+		path_display = {
+			"filename_first",
+		},
 	},
 
 	pickers = {

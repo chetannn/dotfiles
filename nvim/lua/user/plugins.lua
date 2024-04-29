@@ -17,6 +17,7 @@ return {
 				auto_install = true,
 				indent = {
 					enable = true,
+					disable = { "dart" },
 				},
 				highlight = {
 					enable = true,
@@ -40,10 +41,6 @@ return {
 	},
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-	{
-		"Exafunction/codeium.vim",
-		event = "BufEnter",
-	},
 	{
 		"kevinhwang91/nvim-ufo",
 		dependencies = {
@@ -104,21 +101,6 @@ return {
 	},
 	{
 		{
-			"rose-pine/neovim",
-			name = "rose-pine",
-			config = function()
-				require("rose-pine").setup({
-					variant = "moon",
-					dark_variant = "moon",
-					bold_vert_split = false,
-					dim_nc_background = false,
-					disable_background = false,
-					disable_float_background = false,
-					disable_italics = true,
-				})
-			end,
-		},
-		{
 			"ThePrimeagen/harpoon",
 			dependencies = { "nvim-lua/plenary.nvim" },
 		},
@@ -144,6 +126,20 @@ return {
 					format_on_save = { timeout_ms = 1000, lsp_fallback = true, async = false },
 				})
 			end,
+		},
+		{
+			"mfussenegger/nvim-lint",
+			event = {
+				"BufReadPre",
+				"BufNewFile",
+				config = function()
+					local lint = require("lint")
+					lint.linters_by_ft = {
+						javascript = { "eslint_d" },
+						typescript = { "eslint_d" },
+					}
+				end,
+			},
 		},
 	},
 }
