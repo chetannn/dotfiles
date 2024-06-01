@@ -22,7 +22,6 @@ require("mason-lspconfig").setup({
 		"tsserver",
 		"rust_analyzer",
 		"gopls",
-		"gleam",
 	},
 	handlers = {
 		lsp_zero.default_setup,
@@ -52,6 +51,8 @@ lspconfig.tsserver.setup({
 
 lspconfig.volar.setup({})
 lspconfig.gleam.setup({})
+
+lspconfig.biome.setup({})
 
 cmp.setup({
 	mapping = {
