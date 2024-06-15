@@ -46,16 +46,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
--- codeium keymaps
-vim.keymap.set("i", "<C-g>", function()
-	return vim.fn["codeium#Accept"]()
-end, { expr = true })
-vim.keymap.set("i", "<c-;>", function()
-	return vim.fn["codeium#CycleCompletions"](1)
-end, { expr = true })
-vim.keymap.set("i", "<c-,>", function()
-	return vim.fn["codeium#CycleCompletions"](-1)
-end, { expr = true })
-vim.keymap.set("i", "<c-x>", function()
-	return vim.fn["codeium#Clear"]()
-end, { expr = true })
+-- oil keymaps
+vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
