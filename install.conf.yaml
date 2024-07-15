@@ -15,6 +15,7 @@
     ~/.config/wezterm/wezterm.lua:
       create: true
       path: wezterm/wezterm.lua
+    ~/.config/wezterm/utils: wezterm/utils
 
 - create:
     - ~/.vim/undo-history

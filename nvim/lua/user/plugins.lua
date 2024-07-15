@@ -114,7 +114,7 @@ return {
 					formatters_by_ft = {
 						lua = { "stylua" },
 						javascript = { { "prettierd", "prettier" } },
-						typescript = { { "biome", "prettierd", "prettier" } },
+						typescript = { { "prettierd", "prettier", "biome" } },
 						svelte = { { "prettierd", "prettier" } },
 						javascriptreact = { { "prettierd", "prettier" } },
 						typescriptreact = { { "prettierd", "prettier" } },
