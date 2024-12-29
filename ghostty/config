@@ -1,0 +1,24 @@
+# Font
+font-family = "CommitMono Nerd Font Mono"
+font-family = "Symbols Nerd Font Mono"
+font-size =  14
+
+# Line height
+adjust-cursor-height = 8
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Theme
+theme = "rose-pine-moon"
+
+# keybindings
+
+# Window
+window-padding-y = 2,0
+window-padding-balance = true
+# window-decoration = false
+
+# Other
+copy-on-select = clipboard
+

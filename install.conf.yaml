@@ -12,10 +12,16 @@
     ~/.config/bin/tt: 
         create: true
         path: bin/tt
+    ~/.config/ghostty/config:
+      create: true
+      path: ghostty/config
     ~/.config/wezterm/wezterm.lua:
       create: true
       path: wezterm/wezterm.lua
     ~/.config/wezterm/utils: wezterm/utils
+    ~/.config/aerospace/aerospace.toml:
+      create: true
+      path: aerospace/aerospace.toml
 
 - create:
     - ~/.vim/undo-history

@@ -30,6 +30,10 @@ local options = {
 	hlsearch = false,
 	incsearch = true,
 	updatetime = 50,
+	foldcolumn = "0",
+	foldlevel = 99,
+	foldlevelstart = 99,
+	foldenable = true,
 }
 
 for k, v in pairs(options) do

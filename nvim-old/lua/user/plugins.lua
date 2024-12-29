@@ -45,21 +45,15 @@ return {
 		"kevinhwang91/nvim-ufo",
 		dependencies = {
 			"kevinhwang91/promise-async",
-			{
-				"luukvbaal/statuscol.nvim",
-				config = function()
-					local builtin = require("statuscol.builtin")
-					require("statuscol").setup({
-						relculright = true,
-						segments = {
-							{ text = { builtin.foldfunc }, click = "v:lua.ScFa" },
-							{ text = { "%s" }, click = "v:lua.ScSa" },
-							{ text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
-						},
-					})
-				end,
-			},
 		},
+		config = function()
+			--- @diagnostic disable: unused-local
+			require("ufo").setup({
+				provider_selector = function(_bufnr, _filetype, _buftype)
+					return { "treesitter", "indent" }
+				end,
+			})
+		end,
 	},
 	{
 		"folke/noice.nvim",
@@ -78,6 +72,7 @@ return {
 		},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
 		},
 	},
 	{
@@ -113,11 +108,11 @@ return {
 				conform.setup({
 					formatters_by_ft = {
 						lua = { "stylua" },
-						javascript = { { "prettierd", "prettier" } },
-						typescript = { { "prettierd", "prettier", "biome" } },
-						svelte = { { "prettierd", "prettier" } },
-						javascriptreact = { { "prettierd", "prettier" } },
-						typescriptreact = { { "prettierd", "prettier" } },
+						javascript = { { "prettierd", "prettierd", "prettier", "biome" } },
+						typescript = { { "prettier", "biome", "prettierd" } },
+						svelte = { { "biome", "prettierd", "prettier" } },
+						javascriptreact = { { "prettierd", "prettier", "biome" } },
+						typescriptreact = { { "prettierd", "prettier", "biome" } },
 						css = { { "prettierd", "prettier" } },
 						rust = { "rustfmt" },
 						go = { "gofumpt" },
@@ -275,6 +270,19 @@ return {
 					},
 					keymaps_help = {
 						border = "rounded",
+					},
+				})
+			end,
+		},
+		{
+			"rose-pine/neovim",
+			name = "rose-pine",
+			config = function()
+				require("rose-pine").setup({
+					styles = {
+						bold = true,
+						italic = false,
+						transparency = false,
 					},
 				})
 			end,
