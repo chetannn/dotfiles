@@ -1,7 +1,10 @@
-# Font
+# Appearance
 font-family = "CommitMono Nerd Font Mono"
 font-family = "Symbols Nerd Font Mono"
 font-size =  14
+window-decoration = true
+macos-window-shadow = false
+
 
 # Line height
 adjust-cursor-height = 8
@@ -13,6 +16,24 @@ mouse-hide-while-typing = true
 theme = "rose-pine-moon"
 
 # keybindings
+keybind = super+k=text:\x02\x4b
+keybind = super+t=text:\x02\x63
+keybind = super+r=reload_config
+keybind = super+g=text:\x02\x67
+keybind = super+w=text:\x02\x78
+
+keybind = super+1=text:\x02\x31
+keybind = super+2=text:\x02\x32
+keybind = super+3=text:\x02\x33
+keybind = super+4=text:\x02\x34
+keybind = super+5=text:\x02\x35
+keybind = super+6=text:\x02\x36
+keybind = super+7=text:\x02\x37
+keybind = super+8=text:\x02\x38
+keybind = super+9=text:\x02\x39
+
+keybind = super+left_bracket=text:<C-o>
+
 
 # Window
 window-padding-y = 2,0
